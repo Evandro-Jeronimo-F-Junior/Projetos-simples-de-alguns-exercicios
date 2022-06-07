@@ -1,0 +1,5 @@
+bra = ('Corinthians', 'Palmeiras', 'Atlético-MG', 'Coritiba', 'América-MG', 'São Paulo', 'Internacional', 'Athletico-PR', 'Santos', 'Botafogo', 'Flamengo', 'Fluminense', 'Avaí', 'Bragantino', 'Ceará', 'Juventude', 'Goiás', 'Cuiabá','Atlético-GO', 'Fortaleza')
+print(f'Os cinco primeiro colocados são {bra[0:5]}')
+print(f'Os últimos 4 colocados são {bra[-4:]}')
+print(sorted(bra))
+print('o Internacional está em {}°'.format(bra.index('Internacional')+1))
