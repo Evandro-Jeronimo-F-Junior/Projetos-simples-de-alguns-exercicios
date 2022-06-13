@@ -1,18 +1,15 @@
 a = []
-b = 0
-indi = 0
-maior = 0
-menor = 0
-b = int(input('Digite um número: '))
-a.append(b)
-for i in range(4):
-    b = int(input('Digite um número: '))
-    for indice, valor in enumerate(a):
-        if maior == 0:
-            maior = valor
-            print('Adicionado a primeira posição.')
-        elif valor < b:
-            maior = valor
-            indi = indice
-        print(maior)
-        print(a)
+for c in range(5):
+    n = int(input('D: '))
+    if c == 0 or n > a[len(a)-1]:
+        a.append(n)
+        print('adicionado ao final da lista')
+    else:
+        pos = 0
+        while pos < len(a):
+            if n <= a[pos]:
+                a.insert(pos, n)
+                print(f'adicionado a posição {pos}')
+                break
+            pos += 1
+    print(f'Os valores digitados em ordem foram {a}')
