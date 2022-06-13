@@ -1,13 +1,18 @@
 a = []
-a.append(int(input('Digite um número: ')))
-print('Foi adicionado a primeira posiçao')
 b = 0
+indi = 0
+maior = 0
+menor = 0
+b = int(input('Digite um número: '))
+a.append(b)
 for i in range(4):
     b = int(input('Digite um número: '))
-    if b > max(a):
-        print(f'Adicionado na posição {a.index(max(a))+1}')
-        a.insert(a.index(max(a))+1, b)
-    elif b < min(a):
-        print(f'Adicionado na posição {a.index(min(a))}')
-        a.insert(a.index(min(a)), b)
-print(a)
+    for indice, valor in enumerate(a):
+        if maior == 0:
+            maior = valor
+            print('Adicionado a primeira posição.')
+        elif valor < b:
+            maior = valor
+            indi = indice
+        print(maior)
+        print(a)
